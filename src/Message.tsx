@@ -1,4 +1,4 @@
-// PascalCasing: Capitalized first letter
+// PascalCasing: Capitalized first letter of word
 function Message() {
   // JSX: JavaScript XML
   const name = "Johnny";
