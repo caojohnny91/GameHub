@@ -3,7 +3,10 @@ import { useState } from "react";
 interface Props {
   items: string[];
   heading: string;
+  // (item: string) => void
+  onSelectItem: (item: string) => void;
 }
+
 // getting the props from App.tsx to use here
 function ListGroup(props: Props) {
   // Hook
@@ -22,7 +25,10 @@ function ListGroup(props: Props) {
             // add active class to selected li
             className={selectedIndex === index ? "list-group-item active" : "list-group-item"}
             key={item}
-            onClick={() => setSelectedIndex(index)}
+            onClick={() => {
+              setSelectedIndex(index);
+              props.onSelectItem(item);
+            }}
           >
             {item}
           </li>
