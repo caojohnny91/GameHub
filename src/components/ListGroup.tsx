@@ -8,6 +8,7 @@ interface Props {
 
 // getting the props from App.tsx to use here
 function ListGroup(props: Props) {
+  //can destructure props like: ({heading, items, onSelectItem }: Props) so that you dont have to type props.items below
   // Hook
   const [selectedIndex, setSelectedIndex] = useState(-1); // default state to -1 so no li is selected
 

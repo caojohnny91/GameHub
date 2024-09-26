@@ -1,5 +1,6 @@
 // import ListGroup from "./components/ListGroup";
 import { Alert } from "./components/Alert";
+import { Button } from "./components/Button";
 
 function App() {
   // const items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
@@ -14,6 +15,11 @@ function App() {
       <Alert>
         Hello <span>World</span>
       </Alert>
+
+      {/* adding color now changes the className in button component  */}
+      <Button color="danger" onClick={() => console.log("Clicked!")}>
+        My Button!
+      </Button>
     </div>
   );
 }
